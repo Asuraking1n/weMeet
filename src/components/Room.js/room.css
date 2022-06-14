@@ -1,0 +1,64 @@
+.conference-section{
+    min-height: 100vh;
+    max-height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+}
+
+.conference-section h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.peers-container{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+.peer-container video{
+    border-radius: 15px;
+    height: 18.9rem;
+    width: 25rem;
+    border: 2px solid #fff;
+}
+.peer-name{
+    color:#fff;
+    text-align: center;
+    margin-top: .5rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.control-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mute-btn-control{
+    height: 2rem;
+    width: 8rem;
+    background-color: red;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+.hide-btn-control{
+    height: 2rem;
+    width: 8rem;
+    background-color: red;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}

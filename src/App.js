@@ -1,22 +1,25 @@
-
-
+import JoinForm from "./components/JoinForm/JoinForm";
+import { selectIsConnectedToRoom, useHMSActions, useHMSStore } from "@100mslive/react-sdk";
+import Room from "./components/Room.js/Room";
+// import MuteUnMute from "./components/Room.js/MuteUnMute";
+import './App.css'
 function App() {
+  const isConnected = useHMSStore(selectIsConnectedToRoom);
+  const hmsActions = useHMSActions();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    {isConnected && (
+        <div className="btn-cont">
+        <button
+          className="leave-meet-btn"
+          onClick={() => hmsActions.leave()}
         >
-          Learn React
-        </a>
-      </header>
+          Leave Room
+        </button>
+        </div>
+      )}
+      {isConnected ?<><Room/></> : <JoinForm />}
+
     </div>
   );
 }

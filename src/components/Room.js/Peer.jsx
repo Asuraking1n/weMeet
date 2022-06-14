@@ -1,7 +1,6 @@
 import React from 'react'
 import { useVideo } from "@100mslive/react-sdk";
 import './room.css'
-import MuteUnMute from './MuteUnMute';
 const Peer = ({ peer }) => {
   const { videoRef } = useVideo({
     trackId: peer.videoTrack
@@ -19,7 +18,6 @@ const Peer = ({ peer }) => {
         <div className="peer-name">
           {peer.name} {peer.isLocal ? "(You)" : ""}
         </div>
-        <MuteUnMute/>
       </div>
       
     </>

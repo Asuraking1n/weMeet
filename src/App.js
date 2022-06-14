@@ -1,7 +1,7 @@
 import JoinForm from "./components/JoinForm/JoinForm";
 import { selectIsConnectedToRoom, useHMSActions, useHMSStore } from "@100mslive/react-sdk";
 import Room from "./components/Room.js/Room";
-// import MuteUnMute from "./components/Room.js/MuteUnMute";
+import MuteUnMute from "./components/Room.js/MuteUnMute";
 import './App.css'
 function App() {
   const isConnected = useHMSStore(selectIsConnectedToRoom);
@@ -18,7 +18,7 @@ function App() {
         </button>
         </div>
       )}
-      {isConnected ?<><Room/></> : <JoinForm />}
+      {isConnected ?<><Room/> <MuteUnMute/></> : <JoinForm />}
 
     </div>
   );

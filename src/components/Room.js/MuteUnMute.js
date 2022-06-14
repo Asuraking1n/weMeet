@@ -1,5 +1,5 @@
 import { useAVToggle } from "@100mslive/react-sdk";
-
+import './room.css'
 
 const MuteUnMute = () => {
 
@@ -12,10 +12,10 @@ const MuteUnMute = () => {
     return (
         <>
             <div className="control-bar">
-                <button className="btn-control" onClick={toggleAudio}>
+                <button className="mute-btn-control" onClick={toggleAudio}>
                     {isLocalAudioEnabled ? "Mute" : "Unmute"}
                 </button>
-                <button className="btn-control" onClick={toggleVideo}>
+                <button className="hide-btn-control" onClick={toggleVideo}>
                     {isLocalVideoEnabled ? "Hide" : "Unhide"}
                 </button>
             </div>

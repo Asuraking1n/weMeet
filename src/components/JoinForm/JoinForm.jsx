@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHMSActions } from "@100mslive/react-sdk";
-
+import './joinform.css'
 const JoinForm = () => {
 
 
@@ -28,9 +28,10 @@ const JoinForm = () => {
 
     return (
         <>
+            <div className="Join-page-container">
             <form onSubmit={handleSubmit}>
                 <h2>Join Room</h2>
-                <div className="input-container">
+                <div>
                     <input
                         required
                         value={inputValues.name}
@@ -52,8 +53,9 @@ const JoinForm = () => {
                         placeholder="Auth token"
                     />
                 </div>
-                <button className="btn-primary">Join</button>
+                <button >Join</button>
             </form>
+            </div>
         </>
     )
 }

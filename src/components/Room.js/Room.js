@@ -1,6 +1,7 @@
 import React from "react";
 import { selectPeers, useHMSStore } from "@100mslive/react-sdk";
 import Peer from "./Peer";
+import './room.css'
 const Room = () => {
     const peers = useHMSStore(selectPeers);
     return (

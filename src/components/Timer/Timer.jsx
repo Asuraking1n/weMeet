@@ -1,11 +1,11 @@
 import { selectIsConnectedToRoom, useHMSStore } from "@100mslive/react-sdk";
 import ReactStopwatch from 'react-stopwatch';
-const Timer = () => {
+const Timer = () =>  {
     const isConnected = useHMSStore(selectIsConnectedToRoom);
     return (
         <>
             {isConnected &&
-                <div className='timer'>
+                <div className='timer'>   
                     <ReactStopwatch
                         seconds={0}
                         minutes={0}

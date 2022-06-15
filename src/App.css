@@ -9,7 +9,7 @@
 .btn-cont{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .leave-meet-btn{
   height: 3rem;
@@ -22,4 +22,8 @@
   background-color: #ff0000;
   color: #fff;
   border: none;
+}
+.timer{
+  color: #fff;
+  margin-left: 1rem;
 }
